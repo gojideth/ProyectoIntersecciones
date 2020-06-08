@@ -38,10 +38,12 @@ public class CirclesInArea {
         return  salida;
     }
     public double diferenceBetweenCoordinates(Circle circle1, Circle circle2){
-        return 
+         return (circle1.getPosition().distanceTo(circle2.getPosition()));
 
     }
     public int obtainIntersection(){
+        if () {
 
+        }
     }
 }
