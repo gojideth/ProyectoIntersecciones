@@ -24,7 +24,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double obtainArea() {
         return (Math.PI * Math.pow(this.getRadio(),3));
+    }
+
+    @Override
+    public String toString() {
+        return "Radio del circulo : " + this.getRadio()
+                + ", posición del circulo: " + this.getPosition() +".";
     }
 }
