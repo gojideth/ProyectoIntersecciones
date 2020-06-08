@@ -14,5 +14,6 @@ public class CirclesInArea {
     public void setCircles(Circle[] circles) {
         this.circles = circles;
     }
+    
 
 }

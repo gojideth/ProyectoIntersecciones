@@ -1,0 +1,95 @@
+Planteamiento del problema ----> Hay una cantidad determinada de figuras(circulos, cuadrados y triangulos) en un espacio, ¿cuantas intersecciones hay?
+
+1. Tenemos figuras en dos dimensiones.
+2. ¿Qué es una intersección? => Cuando dos figuras se cortan.
+3. Debo saber cuantos circulos se intersecan en un espacio.
+
+
+	INPUT    _______	  	OUTPUT
+#circulos 	!  a	!
+Posición C/U	!  l	!
+Radio		!  g	!	# de Intersecciones.
+Aréa		!  o...	!
+		!_______!
+
+4.  Análisis, ¿como calculo distancia entre dos posiciones?
+	
+	*Con el radio y centro del circulo obtengo ---> coordenada ---> cartesiana (x,y) / polar (ángulo,dist)
+
+	*Distancia entre dos puntos --> hipotenusa = ((x*x) + (y*y))
+	
+	*Intersección ¿? = radioCircUno + radioCircDos < distanciaC1_c2
+	
+	*¿cuándo un circulo está contenido dentro de otro? ¿11.999999997 == 6+6?
+
+5. Diseñar casos de prueba.
+
+	*Caso de prueba 1.
+
+
+
+6. Diseñar arquitectura de la solución ---> OOP
+	a. Clases, listado de sustantivos...
+	b. Atributos de clase ---> sustantivos
+	c. Listar verbos ---> candidatos a ser métodos...
+	
+Tengo estas clases:
+
+ *Cartesian:
+ 	-x
+ 	-y
+	 distanceTo(coordenate)
+ 	...
+ *Polar
+	-angle
+	-distance
+	distanceTo(polar)
+	...
+
+ *Circle:
+	-radio
+	-center
+	intersection(Circle)
+	...
+ *CircleGroup:
+	-circles
+	countIntersections()
+	...
+ *Area
+	-width
+	-height
+	....
+
+7. Algoritmos
+
+	*distanceTo(coordinate)... ---> 
+		return raiz((x-coordinate.x)pow2 + (y - coord.y)pow2)	
+
+	*countIntersection()... -->
+		contador <- 0
+		necesito comparar (1 con 2) para que me cuente las intersecciones
+		for(){
+			for(){
+			 Si el circuloJ interseca el circuloK entonces incrementar contador
+			}
+
+		}
+		return contador
+
+8.a Codificación ---> Lenguaje de programación ---> Java
+	
+	Aplicar las mejores prácticas de programación.
+	
+  B.Codificar casos de prueba.
+  C.Evaluar resultados...
+
+9. Documentación + resultado de pruebas...
+
+10. Implementación (entrega)
+	1. Documento ---> document.pdf
+	2. Código fuente ---> .java ---> source.zip
+	3. Fuentes de la prueba ---> tests.zip
+	4. Ejecutable ---> programName.jar
+	5. Instrucciones de uso ---> .txt (README.MD
+		
+
