@@ -1,3 +1,6 @@
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class CirclesInArea {
     public final static int MAX = 2;
     public Circle[] circles;
@@ -37,13 +40,31 @@ public class CirclesInArea {
         }
         return  salida;
     }
+
     public double diferenceBetweenCoordinates(Circle circle1, Circle circle2){
          return (circle1.getPosition().distanceTo(circle2.getPosition()));
-
     }
-    public int obtainIntersection(){
-        if () {
+
+    public double sumRadios(Circle circles[]){
+        int i = 0;
+        double salida = 0;
+        while (circles[i]!= null){
+            salida += circles[i].getRadio() + circles[i+1].getRadio();
+            i++;
 
         }
+        return salida;
     }
+    public int obtainIntersection(double distanceBetweenCoordnates, double sumRadios){
+        for (int i = 0; i < circles.length-1; i++) {
+            for (int j = i+1; j <circles.length-2; j++) {
+                if (distanceBetweenCoordnates > (sumRadios)) {
+
+                }
+            }
+        }
+
+    }
+
+
 }
