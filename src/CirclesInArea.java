@@ -41,9 +41,14 @@ public class CirclesInArea {
          return (circle1.getPosition().distanceTo(circle2.getPosition()));
 
     }
-    public int obtainIntersection(){
-        if () {
-
+    public double sumRadios(Circle circles[]){
+        int i = 0;
+        double salida = 0;
+        while(circles[i+1]!=null){
+            salida += circles[i].getRadio() + circles[i+1].getRadio();
+            i++;
         }
+        return salida;
+
     }
 }
