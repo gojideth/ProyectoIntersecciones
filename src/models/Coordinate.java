@@ -1,3 +1,5 @@
+package models;
+
 public class Coordinate {
     private double coordX;
     private double coordY;

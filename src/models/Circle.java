@@ -1,3 +1,5 @@
+package models;
+
 public class Circle extends Figure {
     public double radio;
     public Coordinate position;

@@ -1,3 +1,5 @@
+package models;
+
 public class CirclesInArea {
     public final static int MAX = 2;
     public Circle[] circles;
