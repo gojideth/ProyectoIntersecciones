@@ -27,7 +27,7 @@ public class Coordinate {
     }
 
     public double distanceTo(Coordinate coord2){
-        return Math.sqrt((Math.pow((this.getCoordX()-coord2.getCoordX()),2)+ Math.pow((this.getCoordY()-coord2.getCoordY()),2)));
+        return Math.sqrt((Math.pow((coord2.getCoordX()-this.getCoordX()),2)+ Math.pow((coord2.getCoordY()-this.getCoordY()),2)));
     }
 
     @Override

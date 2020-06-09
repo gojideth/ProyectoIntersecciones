@@ -33,34 +33,35 @@ public class CirclesInArea {
     }
 
     public String showCircles(Circle circles[]){
-        String salida = "";
+        String out = "";
         for (int i = 0; i <circles.length - 1; i++) {
-            salida += circles[i] + "";
+            out += circles[i] + "";
         }
-        return  salida;
+        return  out;
     }
 
+
+
     public double diferenceBetweenCoordinates(Circle circles[]){
-        int count = 0;
-        double salida = 0;
-        while (circles[count + 1]!=null){
-             for (int i = 0; i <circles.length -1 ; i++) {
-                 for (int j = i +1; j < circles.length-2 ; j++) {
-                     salida = circles[i].getPosition().distanceTo(circles[j].getPosition());
-                 }
-             }
+        double out = 0;
+        for (int i = 0; i < circles.length - 2 ; i++) {
+            for (int j = 0; j < circles.length - 1; j++) {
+                if (circles[j] != null){
+                    out = circles[i].getPosition().distanceTo(circles[j].getPosition());
+                }
+            }
         }
-        return salida;
+        return out;
     }
 
     public double sumRadios(Circle circles[]){
         int i = 0;
-        double salida = 0;
+        double out = 0;
         while(circles[i+1]!=null){
-            salida += circles[i].getRadio() + circles[i+1].getRadio();
+            out += circles[i].getRadio() + circles[i+1].getRadio();
             i++;
         }
-        return salida;
+        return out;
 
     }
 
