@@ -29,4 +29,9 @@ public class Coordinate {
     public double distanceTo(Coordinate coord2){
         return Math.sqrt((Math.pow((this.getCoordX()-coord2.getCoordX()),2)+ Math.pow((this.getCoordY()-coord2.getCoordY()),2)));
     }
+
+    @Override
+    public String toString() {
+        return ". Eje X: " + this.getCoordX() + ", Eje Y: " + this.getCoordY();
+    }
 }

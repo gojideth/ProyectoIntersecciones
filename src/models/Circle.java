@@ -1,8 +1,8 @@
 package models;
 
 public class Circle extends Figure {
-    public double radio;
-    public Coordinate position;
+    private double radio;
+    private Coordinate position;
 
     public Circle(double radio, Coordinate position) {
         this.position = position;
@@ -32,7 +32,6 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Radio del circulo : " + this.getRadio()
-                + ", posición del circulo: " + this.getPosition() +".";
+        return "Radio del circulo : " + this.getRadio() + this.getPosition() +".";
     }
 }

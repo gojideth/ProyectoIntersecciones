@@ -1,8 +1,8 @@
 package models;
 
 public class CirclesInArea {
-    public final static int MAX = 2;
-    public Circle[] circles;
+    private final static int MAX = 2;
+    private Circle[] circles;
 
     public CirclesInArea(){
         this.circles = new Circle[1];
@@ -40,8 +40,17 @@ public class CirclesInArea {
         return  salida;
     }
 
-    public double diferenceBetweenCoordinates(Circle circle1, Circle circle2){
-         return (circle1.getPosition().distanceTo(circle2.getPosition()));
+    public double diferenceBetweenCoordinates(Circle circles[]){
+        int count = 0;
+        double salida = 0;
+        while (circles[count + 1]!=null){
+             for (int i = 0; i <circles.length -1 ; i++) {
+                 for (int j = i +1; j < circles.length-2 ; j++) {
+                     salida = circles[i].getPosition().distanceTo(circles[j].getPosition());
+                 }
+             }
+        }
+        return salida;
     }
 
     public double sumRadios(Circle circles[]){
@@ -66,4 +75,14 @@ public class CirclesInArea {
         }
         return count;
     }
+
+    /** @Override
+    public String toString() {
+        String salida = "";
+        for (int i = 0; i < ; i++) {
+
+        }
+        return salida;
+    }*/
+
 }
