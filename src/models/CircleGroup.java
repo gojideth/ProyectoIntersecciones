@@ -1,10 +1,10 @@
 package models;
 
-public class CirclesInArea {
+public class CircleGroup {
     private final static int MAX = 2;
     private Circle[] circles;
 
-    public CirclesInArea(){
+    public CircleGroup(){
         this.circles = new Circle[1];
         circles[0] = null;
 
@@ -62,14 +62,13 @@ public class CirclesInArea {
             i++;
         }
         return out;
-
     }
 
     public int obtainIntersections(double distanceBetweenCoordinates, double sumRadios){
         int count = 0;
         for (int i = 0; i < circles.length-1 ; i++) {
             for (int j = i + 1; j <circles.length-2 ; j++) {
-                if (distanceBetweenCoordinates > sumRadios) {
+                if ((distanceBetweenCoordinates > sumRadios)&&((distanceBetweenCoordinates-sumRadios) != 0)) {
                     count ++;
                 }
             }

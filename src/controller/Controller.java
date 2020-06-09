@@ -1,5 +1,6 @@
 package controller;
-import models.CirclesInArea;
+import models.CircleGroup;
+
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 import models.Circle;
@@ -7,10 +8,10 @@ import models.Coordinate;
 
 public class Controller {
     Controller.View myView;
-    CirclesInArea myCircles;
+    CircleGroup myCircles;
 
     public Controller(){
-        myCircles = new CirclesInArea();
+        myCircles = new CircleGroup();
     }
 
     public void menu(){
