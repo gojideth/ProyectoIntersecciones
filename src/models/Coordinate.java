@@ -7,7 +7,6 @@ public class Coordinate {
     public Coordinate(double coordX, double coordY) {
         this.coordX = coordX;
         this.coordY = coordY;
-
     }
 
     public double getCoordX() {
