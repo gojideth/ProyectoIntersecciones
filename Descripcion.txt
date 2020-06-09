@@ -46,10 +46,10 @@ Tengo estas clases:
 	distanceTo(polar)
 	...
 
- *Circle:
+ *models.Circle:
 	-radio
 	-center
-	intersection(Circle)
+	intersection(models.Circle)
 	...
  *CircleGroup:
 	-circles
