@@ -28,6 +28,7 @@ public class Controller {
                         printCircles();
                         break;
                     case 3:
+                        System.out.println("Num intersecciones" + myCircles.countIntersections(myCircles.getCircles()));
                         //System.out.println("Intersecciones: " + myCircles.obtainIntersections((myCircles.diferenceBetweenCoordinates(myCircles.getCircles())),(myCircles.sumRadios(myCircles.getCircles()))));
                         break;
                     case 4:

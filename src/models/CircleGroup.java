@@ -32,6 +32,19 @@ public class CircleGroup {
         circles = aux;
     }
 
+    public String countIntersections(Circle[]circles){
+        int i = 0; int count = 0;
+        String out = "";
+        while (circles[i+1]!=null){
+            if(circles[i].isIntersected(circles[i+1],circles[i].differenceBetweenCoordinates(circles[i+1])) == true){
+                out += "Hay número de interseccion" + count + "\n";
+                count ++;
+                i++;
+            }
+        }
+        return out;
+    }
+
     /**public String showCircles(Circle circles[]){
         String out = "";
         for (int i = 0; i <circles.length - 2; i++) {
