@@ -1,9 +1,19 @@
 package models;
 
+/**
+ * cl
+ */
 public class Circle extends Figure {
+
+
     private double radio;
     private Coordinate position;
 
+    /**
+     * Constructor para la creación del circulo
+     * @param radio Este parametro incluye el radio que se desea agregar al circulo
+     * @param position Añade la posición de donde está situado el circulo
+     */
     public Circle(double radio, Coordinate position) {
         this.position = position;
         this.radio = radio;

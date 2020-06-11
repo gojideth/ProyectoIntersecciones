@@ -45,7 +45,7 @@ public class CircleGroup {
     public double diferenceBetweenCoordinates(Circle circles[]){
         double out = 0;
         for (int i = 0; i < circles.length - 2 ; i++) {
-            for (int j = 0; j < circles.length - 1; j++) {
+            for (int j = i +1; j < circles.length - 1; j++) {
                 if (circles[j] != null){
                     out = circles[i].getPosition().distanceTo(circles[j].getPosition());
                 }
