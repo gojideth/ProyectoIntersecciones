@@ -35,6 +35,22 @@ public class Circle extends Figure {
         this.position = position;
     }
 
+    public boolean isIntersected(Circle circle, double differenceCoordinates){
+        boolean out = false;
+            if ((double)this.getRadio()+circle.getRadio()> differenceCoordinates){
+                out = true;
+            }
+        return out;
+    }
+
+    public double differenceBetweenCoordinates(Circle circle2){
+        double out = 0;
+        while (circle2!=null){
+            out = this.getPosition().distanceTo(circle2.getPosition());
+        }
+        return out;
+    }
+
     @Override
     public double obtainArea() {
         return (Math.PI * Math.pow(this.getRadio(),3));

@@ -28,10 +28,10 @@ public class Controller {
                         printCircles();
                         break;
                     case 3:
-                        System.out.println("Intersecciones: " + myCircles.obtainIntersections((myCircles.diferenceBetweenCoordinates(myCircles.getCircles())),(myCircles.sumRadios(myCircles.getCircles()))));
+                        //System.out.println("Intersecciones: " + myCircles.obtainIntersections((myCircles.diferenceBetweenCoordinates(myCircles.getCircles())),(myCircles.sumRadios(myCircles.getCircles()))));
                         break;
                     case 4:
-                        System.out.println("Diference:" + myCircles.diferenceBetweenCoordinates(myCircles.getCircles()));
+                        //System.out.println("Diference:" + myCircles.diferenceBetweenCoordinates(myCircles.getCircles()));
                         break;
 
                 }

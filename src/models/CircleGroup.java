@@ -32,9 +32,9 @@ public class CircleGroup {
         circles = aux;
     }
 
-    public String showCircles(Circle circles[]){
+    /**public String showCircles(Circle circles[]){
         String out = "";
-        for (int i = 0; i <circles.length - 1; i++) {
+        for (int i = 0; i <circles.length - 2; i++) {
             out += circles[i] + "";
         }
         return  out;
@@ -58,7 +58,7 @@ public class CircleGroup {
         int i = 0;
         double out = 0;
         while(circles[i+1]!=null){
-            out += circles[i].getRadio() + circles[i+1].getRadio();
+            out = circles[i].getRadio() + circles[i+1].getRadio();
             i++;
         }
         return out;
@@ -76,7 +76,7 @@ public class CircleGroup {
         return count;
     }
 
-    /** @Override
+    @Override
     public String toString() {
         String salida = "";
         for (int i = 0; i < ; i++) {
