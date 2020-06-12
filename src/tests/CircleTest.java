@@ -45,10 +45,18 @@ public class CircleTest {
         System.out.println("Caso de prueba 10: " + (new Circle(1.6,new Coordinate(-2,2)).isIntersected(new Circle(2, new Coordinate(1,2)),new Circle(1.6,new Coordinate(-2,2)).getPosition().distanceTo(new Coordinate(1,2)))== true?"OK":"ERROR"));
     }
 
-    public static void main(String args[]){
+    public void test3(){
+        Circle circuloTest = new Circle(3,new Coordinate(-3,4));
+        Circle circle2 = new Circle(4,new Coordinate(3,4));
+        System.out.println("Metodo distance to");
+        System.out.println("Caso de prueba 1: " + (circuloTest.differenceBetweenCoordinates(circle2)));
+        System.out.println("Is intersected?: " + circuloTest.isIntersected(circle2,circuloTest.differenceBetweenCoordinates(circle2)));
+    }
 
-        new CircleTest().test();
-        System.out.println("");
-        new CircleTest().test2();
+    public static void main(String args[]){
+        new CircleTest().test3();
+        //new CircleTest().test();
+        //System.out.println("");
+        //new CircleTest().test2();
     }
 }

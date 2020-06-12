@@ -19,11 +19,13 @@ public class CircleGroupTest {
         Circle circle2 = new Circle(4,segundaCor);
         myCircleTest.addCircle(circle1);
         myCircleTest.addCircle(circle2);
+        //myCircleTest.addCircle(new Circle(2,new Coordinate(9,5)));
 
     }
 
     public void tester(){
         System.out.println("Metodo show intersections");
+        System.out.println("No c:" + myCircleTest.countIntersections(myCircleTest.getCircles()));
        // System.out.println("Caso prueba 1: " + (new CircleGroup().obtainIntersections(new CircleGroup().diferenceBetweenCoordinates(myCircleTest.getCircles()),new CircleGroup().sumRadios(myCircleTest.getCircles()))));
         /**System.out.println("Caso prueba 2: " + (new CircleGroup().obtainIntersections(new CircleGroup().diferenceBetweenCoordinates())));
         new CircleGroup().diferenceBetweenCoordinates(new CircleGroup().addCircle(new Circle(3,new Coordinate(-3,4))));*/
@@ -31,7 +33,7 @@ public class CircleGroupTest {
 
     public static void main(String args[]){
         CircleGroupTest myTest = new CircleGroupTest();
-        //myTest.aumentarCirclesThis();
+        myTest.aumentarCirclesThis();
         myTest.tester();
     }
 }
