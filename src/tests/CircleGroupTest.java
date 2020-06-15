@@ -13,10 +13,11 @@ public class CircleGroupTest {
     }
 
     public void aumentarCirclesThis(){
+        myCircleTest.addCircle(new Circle(1,new Coordinate(-8,4)));
         myCircleTest.addCircle(new Circle(3,new Coordinate(-3,4)));
         myCircleTest.addCircle(new Circle(4,new Coordinate(3,4)));
-        myCircleTest.addCircle(new Circle(4,new Coordinate(6,4)));
-        myCircleTest.addCircle(new Circle(2,new Coordinate(9,4)));
+        //myCircleTest.addCircle(new Circle(4,new Coordinate(6,4)));
+        //myCircleTest.addCircle(new Circle(2,new Coordinate(9,4)));
 
     }
 
