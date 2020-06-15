@@ -36,7 +36,7 @@ public class Controller {
                         break;
 
                 }
-            }catch (NumberFormatException inputMismarchtException){
+            }catch (NumberFormatException inputMismatchException){
                 myView.showMessage("Indique una opción válida");
             }
         }while(option != 5);
