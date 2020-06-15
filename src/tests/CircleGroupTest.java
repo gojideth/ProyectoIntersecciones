@@ -13,22 +13,16 @@ public class CircleGroupTest {
     }
 
     public void aumentarCirclesThis(){
-        Coordinate primerCor = new Coordinate(-3,4);
-        Circle circle1 = new Circle(3,primerCor);
-        Coordinate segundaCor = new Coordinate(3,4);
-        Circle circle2 = new Circle(4,segundaCor);
-        myCircleTest.addCircle(circle1);
-        myCircleTest.addCircle(circle2);
-        //myCircleTest.addCircle(new Circle(2,new Coordinate(9,5)));
+        myCircleTest.addCircle(new Circle(3,new Coordinate(-3,4)));
+        myCircleTest.addCircle(new Circle(4,new Coordinate(3,4)));
+        myCircleTest.addCircle(new Circle(4,new Coordinate(6,4)));
+        myCircleTest.addCircle(new Circle(2,new Coordinate(9,4)));
 
     }
 
     public void tester(){
         System.out.println("Metodo show intersections");
-        System.out.println("No c:" + myCircleTest.countIntersections(myCircleTest.getCircles()));
-       // System.out.println("Caso prueba 1: " + (new CircleGroup().obtainIntersections(new CircleGroup().diferenceBetweenCoordinates(myCircleTest.getCircles()),new CircleGroup().sumRadios(myCircleTest.getCircles()))));
-        /**System.out.println("Caso prueba 2: " + (new CircleGroup().obtainIntersections(new CircleGroup().diferenceBetweenCoordinates())));
-        new CircleGroup().diferenceBetweenCoordinates(new CircleGroup().addCircle(new Circle(3,new Coordinate(-3,4))));*/
+        System.out.println("Caso de Prueba : " + myCircleTest.countIntersections(myCircleTest.getCircles()) + " intersecciones.");
     }
 
     public static void main(String args[]){

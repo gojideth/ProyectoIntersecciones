@@ -26,4 +26,5 @@ public class CoordinateTest {
     public static void main(String args[]){
         new CoordinateTest().tester();
     }
+
 }
