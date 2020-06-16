@@ -42,14 +42,12 @@ public class Controller {
                         //System.out.println("Intersecciones: " + myCircles.obtainIntersections((myCircles.diferenceBetweenCoordinates(myCircles.getCircles())),(myCircles.sumRadios(myCircles.getCircles()))));
                         break;
                     case 4:
-                        //System.out.println("Diference:" + myCircles.diferenceBetweenCoordinates(myCircles.getCircles()));
                         break;
-
                 }
             }catch (NumberFormatException inputMismatchException){
                 myView.showMessage("Indique una opción válida");
             }
-        }while(option != 5);
+        }while(option != 4);
     }
 
     /**
@@ -102,8 +100,7 @@ public class Controller {
         String menuText = "1. Adicionar Circulos\n" +
                         "2. Mostrar circulos \n" +
                         "3. Obtener intersecciones\n" +
-                        "4. Diferencia entre coordenadas\n" +
-                        "5. Salir del menú\n";
+                        "4. Salir del menú\n";
 
                 return readShort(menuText);
         }

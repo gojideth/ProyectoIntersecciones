@@ -42,7 +42,7 @@ public class CircleGroup {
     }
 
     /**
-     * Método que redimensiona el arrelgo de círculos dejando nula la última posición de este
+     * Método que redimensiona el arreglo de círculos dejando nula la última posición de este
      */
     public void resizeCirclesArray(){
         Circle[] aux = new Circle[circles.length+1];
