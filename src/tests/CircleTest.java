@@ -3,13 +3,23 @@ package tests;
 import models.Circle;
 import models.Coordinate;
 
+/**
+ * Clase de prueba de círculo
+ * @author Martin C
+ */
 public class CircleTest {
     Circle circleTest;
 
+    /**
+     * Método constructor por defecto
+     */
     public CircleTest(){
         this.circleTest = new Circle(3,new Coordinate(3,2));
     }
 
+    /**
+     * Método que prueba si el área de los circulos está siendo obtenida correctamente
+     */
     public void test(){
         System.out.println("Método obtainArea");
         System.out.println("Caso de prueba 1: " + (new Circle(2,new Coordinate(0,0)).obtainArea()==(Math.PI * Math.pow(2,3))?"OK":"ERROR"));
@@ -24,6 +34,9 @@ public class CircleTest {
         System.out.println("Caso de prueba 10: " + (new Circle(2.245,new Coordinate(0,0)).obtainArea()==(Math.PI * Math.pow(2.245,3))?"OK":"ERROR"));
     }
 
+    /**
+     * Método que prueba si un circulo se intersecta con otro correctamente
+     */
     public void test2(){
         System.out.println("Método isIntersected");
         System.out.println("Caso de prueba 1: " + (new Circle(4, new Coordinate(-3, 3)).isIntersected(new Circle(5, new Coordinate(4, 2))) ?"OK, INTERSECACIÓN":"NO HAY INTERSECACIÓN"));
@@ -39,20 +52,10 @@ public class CircleTest {
 
     }
 
-    public void test3(){
-        Circle circuloTest = new Circle(3,new Coordinate(-3,4));
-        Circle circle2 = new Circle(4,new Coordinate(3,4));
-        System.out.println("Metodo distance to");
-        System.out.println("Caso de prueba 1: " + (circuloTest.isIntersected(circle2)));
-        System.out.println("Is intersected?: " + circuloTest.isIntersected(circle2));
-
-
-    }
 
     public static void main(String args[]){
-        //new CircleTest().test3();
-        //new CircleTest().test();
-        //System.out.println("");
+        new CircleTest().test();
+        System.out.println("");
         new CircleTest().test2();
     }
 }

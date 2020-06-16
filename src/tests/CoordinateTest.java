@@ -2,12 +2,23 @@ package tests;
 
 import models.Coordinate;
 
+/**
+ * Clase de prueba para coordenada
+ * @author Martin C
+ */
 public class CoordinateTest {
     private Coordinate coordinateTest;
 
+    /**
+     * Método constructor por defecto
+     */
     public CoordinateTest(){
         coordinateTest = new Coordinate(0,0);
     }
+
+    /**
+     * Método que prueba si la distancia de un punto a otro está siendo obtenida correctamente
+     */
     public void tester(){
         System.out.println("Metodo distanceTo");
         System.out.println("Caso de prueba 1: " + (new Coordinate(3,4).distanceTo(new Coordinate(4,5))==Math.sqrt(2)?"OK":"Error"));

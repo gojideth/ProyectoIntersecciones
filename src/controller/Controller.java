@@ -38,7 +38,7 @@ public class Controller {
                         printCircles();
                         break;
                     case 3:
-                        myView.showMessage("" + myCircles.countIntersections(myCircles.getCircles()));
+                        myView.showMessage("Hay un total de: " + myCircles.countIntersections(myCircles.getCircles()) + " intersecciones. \n");
                         //System.out.println("Intersecciones: " + myCircles.obtainIntersections((myCircles.diferenceBetweenCoordinates(myCircles.getCircles())),(myCircles.sumRadios(myCircles.getCircles()))));
                         break;
                     case 4:
@@ -64,8 +64,8 @@ public class Controller {
      * @return El círculo creado
      */
     public Circle createCircle(){
-        double radio = myView.readDouble("Ingrese el radio");
-        Coordinate coordinates = new Coordinate(myView.readDouble("Eje X"),myView.readDouble("Eje Y"));
+        double radio = myView.readDouble("Ingrese el radio: ");
+        Coordinate coordinates = new Coordinate(myView.readDouble("Eje X: "),myView.readDouble("Eje Y: "));
         Circle circle = new Circle(radio,coordinates);
         return circle;
     }
@@ -113,7 +113,7 @@ public class Controller {
          * @param message El texto a mostrar
          */
         public void showMessage(String message) {
-            System.out.println(message);
+            System.out.print(message);
         }
 
         /**
