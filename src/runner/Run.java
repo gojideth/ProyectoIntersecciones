@@ -1,10 +1,17 @@
 package runner;
 import controller.Controller;
-public class Run {
 
+/**
+ * Clase que corre el programa
+ * @author Martin C
+ */
+public class Run {
+    /**
+     * Método main
+     * @param args Parámetros para correr el programa
+     */
     public static void main(String args[]){
-        Controller myControl = new Controller();
-        myControl.menu();
+        new Controller().menu();
     }
 
 }
