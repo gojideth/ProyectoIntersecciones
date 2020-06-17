@@ -61,7 +61,6 @@ public class CircleGroup {
     public static int countIntersections(Circle[] circles){
         int count = 0;
         int i = 0;
-        int temp = 0;
         for (int j = 0; j < circles.length-2 ; j++) {
             for (int k = 0; k < circles.length - 1 ; k++) {
                 if (circles[i+1]!= null){
