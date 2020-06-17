@@ -58,16 +58,15 @@ public class CircleGroup {
      * @param circles el arreglo de círculos al cual se quiere contar las intersecciones
      * @return la cantidad de intersecciones
      */
-    public int countIntersections(Circle[]circles){
-        int count = 0; String salida = "";
+    public static int countIntersections(Circle[] circles){
+        int count = 0;
         int i = 0;
         for (int j = 0; j < circles.length-2 ; j++) {
             for (int k = 0; k < circles.length - 1 ; k++) {
                 if (circles[i+1]!= null){
                     if (circles[i].isIntersected(circles[i+1])) {
-                        count += 1;
+                        count++;
                         i++;
-
                     }
                 }
             }

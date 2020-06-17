@@ -26,7 +26,7 @@ public class CircleGroupLoad {
      */
     public void generate(){
         CircleGroup circleGroup = new CircleGroup();
-
+        this.circleGroup = circleGroup;
         Circle[] circles = new Circle[parameter.ammount];
         for (int i = 0; i <circles.length ; i++) {
             circles[i] = new Circle(parameter.createRandomRadio(),parameter.createRandomCoordinate());
@@ -45,7 +45,8 @@ public class CircleGroupLoad {
         this.parameter = parameter;
         generate();
         long timeInit = System.currentTimeMillis();
-        System.out.println("Intersecciones: " + this.circleGroup.countIntersections(circleGroup.getCircles()));
+        int totalIntersections = CircleGroup.countIntersections(this.circleGroup.getCircles());
+        System.out.println("Intersecciones: " + String.valueOf(totalIntersections));
         System.out.println("Duracion: " + (System.currentTimeMillis()-timeInit) + " milisegundos");
     }
 

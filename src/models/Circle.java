@@ -7,7 +7,7 @@ package models;
 public class Circle extends Figure {
 
 
-    private double radio;
+    public double radio;
     private Coordinate position;
 
     /**
@@ -58,7 +58,7 @@ public class Circle extends Figure {
      * @return True si está interceptado por otro círculo o false si no lo está
      */
     public boolean isIntersected(Circle circle){
-        return (this.radio+circle.radio)>= (this.position.distanceTo(circle.getPosition()));
+        return (this.radio+circle.radio) >= (this.position.distanceTo(circle.getPosition()));
     }
 
     /**
