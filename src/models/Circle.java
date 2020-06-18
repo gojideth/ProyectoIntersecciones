@@ -67,7 +67,7 @@ public class Circle extends Figure {
      */
     @Override
     public double obtainArea() {
-        return (Math.PI * Math.pow(this.getRadio(),3));
+        return (Math.PI * Math.pow(this.getRadio(),2));
     }
 
     /**
